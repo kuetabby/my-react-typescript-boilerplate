@@ -24,6 +24,7 @@
         "build": "react-scripts build",
         "cy:run": "cypress run",
         "cy:open": "cypress open",
+        "type-check": "tsc --noEmit",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
