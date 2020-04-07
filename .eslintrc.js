@@ -11,6 +11,7 @@ module.exports = {
         ecmaVersion: 2019, // Allows for the parsing of modern ECMAScript features
         sourceType: 'module', // Allows for the use of imports
         ecmaFeatures: {
+            impliedStrict: true,
             jsx: true, // Allows for the parsing of JSX
         },
     },
@@ -19,11 +20,19 @@ module.exports = {
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },
     env : {
+        es6: true,
+        node: true,
         browser: true
     },
     settings: {
         react: {
             version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
         },
+        'import/resolver': {
+            node: {
+              extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            },
+            typescript: {},
+          },
     },
 };
